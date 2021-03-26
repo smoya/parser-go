@@ -16,6 +16,11 @@ type MessageProcessor func(*map[string]interface{}) error
 
 type EncoderOpts func(*json.Encoder) error
 
+// This should force golangci-lint to fail
+func notused() error {
+	return nil
+}
+
 func (mp MessageProcessor) BuildParse(encoderOpts ...EncoderOpts) Parse {
 	return func(reader io.Reader, writer io.Writer) error {
 		// fetch document from reader
