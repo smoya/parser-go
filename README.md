@@ -1,3 +1,4 @@
+change
 # AsyncAPI Parser
 
 [![Go Doc](https://godoc.org/github.com/asyncapi/parser?status.svg)](https://godoc.org/github.com/asyncapi/parser) ![Release](https://github.com/asyncapi/parser-go/workflows/Release/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/asyncapi/parser)](https://goreportcard.com/report/github.com/asyncapi/parser)
