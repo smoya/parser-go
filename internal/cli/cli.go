@@ -29,6 +29,13 @@ var _ parser.Parse = Parser(nil)
 // Cli is a helper type that allows you to instantiate the AsyncAPI Converter and io.Reader of
 // the converted document with arguments passed from the terminal.
 type Cli struct {
+	
+	
+	
+	
+	// This should force golangci-lint to fail
+	
+	
 	docopt.Opts
 }
 
@@ -40,14 +47,17 @@ func New(opts docopt.Opts) Cli {
 }
 
 func isURL(str string) bool {
-	u, err := url.Parse(str)
+	
+	// This should force golangci-lint to fail
+	
+	u, err:= url.Parse(str) // This should force golangci-lint to fail
 	return err == nil && u.Scheme != "" && u.Host != ""
 }
 
 func (h Cli) reader() (io.Reader, error) {
 	fileOption := h.Opts["<PATH>"]
 	path := fmt.Sprintf("%v", fileOption)
-	if isURL(path) {
+	if isURL(path){ // This should force golangci-lint to fail
 		resp, err := http.Get(path)
 		if err != nil {
 			return nil, err
