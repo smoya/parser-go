@@ -29,6 +29,7 @@ jobs:
         uses: golangci/golangci-lint-action@v2 # golangci-lint version extracted from go.mod. `latest` if missing.
         with:
           skip-go-installation: true # we wanna control the version of Go in use
+          only-new-issues: true # linters will run against only modified code
   
   test:
     if: github.event.pull_request.draft == false
